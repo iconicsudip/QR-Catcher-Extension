@@ -1,0 +1,18 @@
+{
+    "manifest_version":2,
+    "name":"QRcatcher",
+    "description":"Make your first qr code here",
+    "version":"1.0.0",
+    "browser_action":{
+        "default_popup":"QRcatcher.html"
+    },
+    "background":{
+        "scripts":["qr.js"]
+    },
+    "content_scripts":[{
+        "matches":["<all_urls>"],
+        "js":["jquery.js","qr.js"]
+    }],
+    "permissions":["tabs","webRequest","<all_urls>"]
+    
+}
