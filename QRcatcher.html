@@ -6,28 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="qr.css">
 </head>
-<style type="text/css" media="screen">
-    
-    .form-check{
-        margin-top: 1rem;
-    }
-</style>
-<body style="width: 30rem;height: 40rem;    padding: 1rem;
-border: red;
-margin: 2rem;
-box-shadow: 0px 0px 6px black;">
+<body >
     <h1 style="text-align: center;">QR Catcher</h1>
     <hr>
     <h3 style="text-align: center;">Choose QR pattern</h3>
+    
     <div class="choose" style="text-align: center;">
         <select id="formSel">
-            <option value="-">Select a form</option>
-            <option value="1">url</option>
-            <option value="2">Wifi</option>
+            <div class="option">
+                <option value="-" selected disabled>Select a form</option>
+                <option value="1">url</option>
+                <option value="2">Wifi</option>
+            </div>
         </select>
     </div>
-    <div id="form" style="display: none;
+    <div id="form" style="display: none!important;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -40,13 +38,19 @@ box-shadow: 0px 0px 6px black;">
             <input type="text" name="Wifi Device Name" id="wifi_name" required>
             <input type="text" name="Wifi Password" id="wifi_pass" required>
         </form>
-        <span>QR code Color</span>
-        <input type="color" id="favcolor" name="favcolor" value="black">
-        <span>QR code Background Color</span>
-        <input type="color" id="favcolor2" name="favcolor" value="#ffffff">
-        <button id="getbutton">Get QR code</button>
-        <div id="qrcode"></div>
-        <h3>To download that QR code "press right button" of your mouse and then click on "save image as.." and then save as you want</h3>
+        <div class="color">
+            <span style="font-weight: 900;">QR Color =</span>
+            <input type="color" id="favcolor" name="favcolor" value="black">
+            <span style="font-weight: 900;">QR Background Color =</span>
+            <input type="color" id="favcolor2" name="favcolor" value="#ffffff">
+        </div>
+        <button id="getbutton">GET UR QR</button>
+        <div id="qr">
+            <div id="qrcode"></div>
+        </div>
+        <div class="alert">
+            <h3>To download that QR code "press right button" of your mouse and then click on "save image as.." and then save as you want.</h3>
+        </div>
     </div>
     <!--<script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>-->
     <script src="qrcode.min.js"></script>

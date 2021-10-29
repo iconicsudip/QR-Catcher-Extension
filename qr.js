@@ -1,13 +1,17 @@
-
+document.body.style.height = "15rem";
 $('#formSel').change( function() {
     var id = $(this).val();
     if( id != '-' )
     {
+        document.body.style.height = "30rem";
+        document.getElementById("qr").style.display="none";
         document.getElementById("form").style.display="flex";
         $('form').hide();
         $('#form'+id).show();
     }else{
         document.getElementById("form").style.display="none";
+        document.body.style.height = "15rem";
+        document.getElementById("qr").style.display="none";
     }
 });
 
@@ -24,6 +28,8 @@ function makeCode () {
             alert("Input an URL");
             document.getElementById('qrcode').innerHTML="";
             elText.focus();
+            document.getElementById("qr").style.display="none";
+            document.body.style.height = "30rem";
             return;
         }
         console.log(document.querySelectorAll('#qrcode img').length);
@@ -47,12 +53,16 @@ function makeCode () {
             alert("Input details");
             wifi_name.focus();
             document.getElementById('qrcode').innerHTML="";
+            document.getElementById("qr").style.display="none";
+            document.body.style.height = "30rem";
             return;
         }
         if(!wifi_pass){
             alert("Input details");
             wifi_pass.focus();
             document.getElementById('qrcode').innerHTML="";
+            document.getElementById("qr").style.display="none";
+            document.body.style.height = "30rem";
             return;
         }
         console.log(document.querySelectorAll('#qrcode img').length);
@@ -63,8 +73,10 @@ function makeCode () {
             qrcode.clear();
             makeCode();
         }
-        
     }
+    document.getElementById("qr").style.display="block";
+    document.body.style.height = "50rem";
 	
 }
 document.getElementById("getbutton").addEventListener("click", makeCode);
+

@@ -1,0 +1,103 @@
+body{
+    font-family: 'Fruktur', cursive;
+    font-family: 'Lobster', cursive;
+    width: 30rem;
+    height: 40rem;
+    padding: 1rem;
+    border: red;
+    margin: 2rem;
+    box-shadow: 0px 0px 6px black;
+    background-image: linear-gradient(349deg, rgb(133 247 255), #ffb462);
+    border-radius: 1rem;border: double;
+}
+.form-check{
+    margin-top: 1rem;
+}
+#formSel{
+    width: 12rem;
+    height: 2rem;
+    outline: none;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 5px black;
+    border-radius: 16px;
+    margin: 1rem;
+    font-weight: 900;
+background: #87f5fc;
+}
+.color{
+    margin: auto;
+margin-top: 1rem;
+margin-bottom: 1em;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: center;
+align-items: center;
+grid-gap: 1rem;
+border: double;
+padding: 12px;
+box-shadow: 0 0 9px black;
+border-radius: 6rem;
+background: #ffb462;
+}
+#getbutton{
+    width: 12rem;
+height: 2rem;
+box-shadow: 0 0 5px black;
+border-radius: 1rem;
+width: 12rem;
+height: 2rem;
+box-shadow: 0px 0px 5px black;
+border-radius: 1rem;
+font-weight: 900;
+background: #87f5fc;
+margin: auto;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+#favcolor,#favcolor2{
+    border-radius: 66px;
+width: 28px;
+cursor: pointer;
+}
+#qrcode{
+    margin: auto;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+form{
+    display: flex;
+    margin: auto;
+flex-flow: row nowrap;
+place-content: center;
+align-items: center;
+gap: 1rem;
+}
+form input{
+    width: 12rem;
+height: 1.5rem;
+border: none;
+outline: none;
+box-shadow: 0 0 5px black;
+border-radius: 1rem;
+padding: 0.5rem;
+font-weight: 900;
+background: #87f5fc;
+}
+.alert{
+    background: #f44336;
+padding: 15px;
+font-size: small;
+border-radius: 1rem;
+box-shadow: 0 0 5px black;
+}
+#qr{
+    box-shadow: 0 0 5px black;
+padding: 1rem;
+margin: 0.5rem;
+background: white;
+border-radius: 1rem;
+}
